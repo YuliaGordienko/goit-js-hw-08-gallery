@@ -58,8 +58,10 @@ function OnMainListClick(event) {
   
   }
 const closeModalBtn = document.querySelector('.lightbox__button')
-closeModalBtn.addEventListener('click', (event) => {
+closeModalBtn.addEventListener('click', OnCloseModal)
+  
+  function OnCloseModal (event) {
   modalBox.classList.remove('is-open')
   event.target.dataset.source = '';
-})
+}
    
